@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uptime Pulse 🚀
 
-## Getting Started
+**Uptime Pulse** is a highly optimized URL and API monitoring platform inspired by services like Uptime Robot. It allows users to monitor the uptime of their APIs and websites with a simple, intuitive dashboard.  
 
-First, run the development server:
+---
+
+## 🌟 Features
+
+- **User Authentication**: Secure login system to manage your monitored APIs.
+- **Add / Update / Delete APIs**: Easily manage the URLs you want to monitor.
+- **Real-Time Status Monitoring**: View the current status (`UP` / `DOWN`) and response time of each API.
+- **Ping APIs Automatically**: Keep APIs awake by sending requests at regular intervals (every 5–10 minutes) using Node.js cron jobs.
+- **Search & Filter**: Quickly find APIs by name or URL.
+- **Instant Updates**: Changes (add/update/delete) are reflected immediately on the dashboard without page refresh.
+- **Responsive & Modern UI**: Clean, mobile-friendly interface built with React and TailwindCSS.
+- **Smooth UX**: Loading animations and seamless interactions for a professional feel.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js, Next.js, TailwindCSS, TypeScript
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT-based authentication (Access & Refresh tokens)
+- **Cron Jobs**: Node.js cron functions to automatically ping APIs
+- **Notifications**: Toast notifications with Sonner
+- **Icons & UI**: Lucide React icons, custom UI components
+
+---
+
+## ⚡ How It Works
+
+1. User logs in to their dashboard.  
+2. User can add APIs they want to monitor by providing a URL and optional endpoint.  
+3. The system **pings each API immediately** and then continues to ping at regular intervals to check uptime and response time.  
+4. API status is displayed in real-time, with visual indicators (`UP` / `DOWN`).  
+5. Any changes (add/update/delete) are instantly reflected in the dashboard for a smooth experience.  
+
+---
+
+## 📸 Screenshots
+
+![Dashboard Screenshot](./screenshots/dashboard.png)  
+*Clean and interactive dashboard view showing API status and response times.*
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/zh012948/uptimepulse.git
+cd uptime-pulse
+
+Install dependencies:
+npm install
+
+Create a .env file based on .env.example:
+
+MONGO_URI=your_mongodb_uri
+ACCESS_TOKEN_SECRET=your_access_token_secret
+ACCESS_TOKEN_EXPIRE=1h
+REFRESH_TOKEN_SECRET=your_refresh_token_secret
+REFRESH_TOKEN_EXPIRE=7d
+PORT=5000
+
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📦 Build for Production
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔒 Security
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+JWT-based authentication for secure API access.
 
-## Learn More
+Passwords hashed with bcrypt.
 
-To learn more about Next.js, take a look at the following resources:
+Environment variables stored securely in .env.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌐 Live Demo
+https://uptime-pulse-zeeshan.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💡 Future Improvements
 
-## Deploy on Vercel
+Email/SMS notifications when an API goes down.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Customizable ping intervals for each API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Analytics & history logs for uptime statistics.
+
+Mobile app version using React Native.
+
+✨ Conclusion
+
+Uptime Pulse provides a lightweight, optimized, and user-friendly alternative to other uptime monitoring services. Its real-time updates, smooth UX, and modern stack make it perfect for developers and teams who want to keep their APIs awake and monitored efficiently.
+
+
+---
+
+If you want, I can also **create a short, catchy “GitHub README front section”** with badges, live demo link, and highlights — that one usually **makes the project look really impressive at first glance**.  
+
+Do you want me to do that?
