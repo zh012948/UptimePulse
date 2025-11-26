@@ -51,7 +51,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/zh012948/uptimepulse.git
+git clone https://github.com/mzeeshanh-dev/uptimepulse.git
 cd uptime-pulse
 
 Install dependencies:
